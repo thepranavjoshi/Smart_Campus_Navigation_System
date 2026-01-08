@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block head %}
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Admin Dashboard</h1>
+    <p>Welcome, {{ session.get('username') }}! Full system overview and analytics.</p>
+</div>
+
+<!-- Quick Stats -->
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-icon">Users</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ widgets.quick_stats.total_users }}</span>
+            <span class="stat-label">Total Users</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">Locations</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ widgets.quick_stats.total_locations }}</span>
+            <span class="stat-label">Locations</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">Routes</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ widgets.quick_stats.total_routes }}</span>
+            <span class="stat-label">Routes</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">Analytics</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ widgets.quick_stats.notification_delivery_rate }}%</span>
+            <span class="stat-label">Delivery Rate</span>
+        </div>
+    </div>
+</div>
+
+<!-- Quick Actions -->
+<div class="quick-actions">
+    <a href="{{ url_for('dashboard.manage_users') }}" class="action-btn">
+        <span class="action-icon">Users</span>
+        <span>Manage Users</span>
+    </a>
+    <a href="{{ url_for('dashboard.analytics') }}" class="action-btn">
+        <span class="action-icon">Analytics</span>
+        <span>Full Analytics</span>
+    </a>
+    <a href="{{ url_for('navigation.navigate') }}" class="action-btn">
+        <span class="action-icon">Navigation</span>
+        <span>Navigation</span>
+    </a>
+    <a href="{{ url_for('dashboard.view_notifications') }}" class="action-btn">
+        <span class="action-icon">Notifications</span>
+        <span>Notifications</span>
+    </a>
+</div>
+
+<!-- Charts Section -->
+<div class="dashboard-grid">
+    <div class="chart-card">
+        <h3>User Distribution</h3>
+        <div class="chart-container">
+            {{ plotly_charts.user_chart | safe }}
+        </div>
+    </div>
+
+    <div class="chart-card">
+        <h3>Notification Delivery</h3>
+        <div class="chart-container">
+            {{ plotly_charts.notification_gauge | safe }}
+        </div>
+    </div>
+</div>
+
+<div class="chart-card full-width">
+    <h3>Locations by Building</h3>
+    <div class="chart-container">
+        {{ plotly_charts.building_chart | safe }}
+    </div>
+</div>
+
+<!-- User Statistics -->
+<div class="data-card">
+    <h3>Users by Role</h3>
+    <div class="role-stats">
+        {% for role, count in widgets.user_stats.items() %}
+        <div class="role-stat">
+            <span class="role-badge badge-{{ role }}">{{ role|title }}</span>
+            <span class="role-count">{{ count }}</span>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Recent Notifications -->
+<div class="data-card">
+    <h3>Recent Notifications</h3>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>User</th>
+                <th>Message</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for notif in widgets.recent_notifications %}
+            <tr>
+                <td>{{ notif.id }}</td>
+                <td>{{ notif.user_id }}</td>
+                <td>{{ notif.message }}</td>
+                <td>
+                    {% if notif.delivered == 'True' %}
+                    <span class="status-delivered">Delivered</span>
+                    {% else %}
+                    <span class="status-pending">Pending</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Accessibility Stats -->
+<div class="data-card">
+    <h3>Accessibility Overview</h3>
+    <div class="accessibility-stats">
+        <div class="access-stat">
+            <span class="access-label">Accessible Locations</span>
+            <span class="access-value">{{ widgets.accessibility.accessible_locations }} / {{
+                widgets.accessibility.total_locations }}</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: {{ widgets.accessibility.location_accessibility_rate }}%"></div>
+            </div>
+        </div>
+        <div class="access-stat">
+            <span class="access-label">Accessible Routes</span>
+            <span class="access-value">{{ widgets.accessibility.accessible_routes }} / {{
+                widgets.accessibility.total_routes }}</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: {{ widgets.accessibility.route_accessibility_rate }}%"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
