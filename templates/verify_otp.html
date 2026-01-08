@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Verify OTP{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-header">
+            <h1>Two-Factor Authentication</h1>
+            <p>Enter the 6-digit code sent to your device</p>
+        </div>
+
+        <form method="POST" class="auth-form">
+            <div class="form-group">
+                <label for="otp">One-Time Password</label>
+                <input type="text" id="otp" name="otp" required placeholder="Enter 6-digit OTP" maxlength="6"
+                    pattern="[0-9]{6}" class="otp-input" autofocus>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+                Verify OTP
+            </button>
+        </form>
+
+        <div class="auth-footer">
+            <p>Didn't receive the code? <a href="{{ url_for('auth.resend_otp') }}">Resend OTP</a></p>
+            <p><a href="{{ url_for('auth.logout') }}">Cancel and return to login</a></p>
+        </div>
+
+        <div class="mfa-info">
+            <h4>📱 How to get your OTP:</h4>
+            <p><strong>Option 1:</strong> Check the terminal where Flask is running</p>
+            <p><strong>Option 2:</strong> Open file: <code>logs/otp_log.txt</code></p>
+            <p style="margin-top:10px; color: #f59e0b;">The OTP is the 6-digit number at the end of the last line.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

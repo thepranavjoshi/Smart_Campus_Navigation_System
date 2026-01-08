@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}Manage Users{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>User Management</h1>
+    <p>Manage campus users and roles</p>
+</div>
+
+<!-- Stats -->
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-icon">Users</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ stats.total }}</span>
+            <span class="stat-label">Total Users</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">Admin</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ stats.admin }}</span>
+            <span class="stat-label">Admins</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">Faculty</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ stats.faculty }}</span>
+            <span class="stat-label">Faculty</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">Students</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ stats.student }}</span>
+            <span class="stat-label">Students</span>
+        </div>
+    </div>
+</div>
+
+<div class="actions-bar">
+    <a href="{{ url_for('dashboard.create_user_page') }}" class="btn btn-primary">
+        Create New User
+    </a>
+</div>
+
+<div class="data-card">
+    <h3>All Users</h3>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td><span class="role-badge badge-{{ user.role }}">{{ user.role|title }}</span></td>
+                <td>
+                    {% if user.id != session.get('user_id') %}
+                    <form method="POST" action="{{ url_for('dashboard.delete_user_page', user_id=user.id) }}"
+                        style="display:inline" onsubmit="return confirm('Delete this user?')">
+                        <button type="submit" class="btn btn-danger btn-small">Delete</button>
+                    </form>
+                    {% else %}
+                    <span class="text-muted">Current User</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
