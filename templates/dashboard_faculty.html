@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %}Faculty Dashboard{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Faculty Dashboard</h1>
+    <p>Welcome, {{ session.get('username') }}! Manage campus content and view reports.</p>
+</div>
+
+<!-- Quick Stats -->
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-icon">Locations</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ widgets.quick_stats.total_locations }}</span>
+            <span class="stat-label">Locations</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">Routes</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ widgets.quick_stats.total_routes }}</span>
+            <span class="stat-label">Routes</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">Alerts</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ notifications.count }}</span>
+            <span class="stat-label">New Alerts</span>
+        </div>
+    </div>
+</div>
+
+<!-- Quick Actions -->
+<div class="quick-actions">
+    <a href="{{ url_for('dashboard.content_management') }}" class="action-btn">
+        <span class="action-icon">Content</span>
+        <span>Manage Content</span>
+    </a>
+    <a href="{{ url_for('navigation.navigate') }}" class="action-btn">
+        <span class="action-icon">Navigation</span>
+        <span>Navigate Campus</span>
+    </a>
+    <a href="{{ url_for('dashboard.view_notifications') }}" class="action-btn">
+        <span class="action-icon">Notifications</span>
+        <span>View Notifications</span>
+    </a>
+</div>
+
+<!-- Notifications -->
+{% if notifications.notifications %}
+<div class="data-card">
+    <h3>Your Notifications</h3>
+    <ul class="notification-list">
+        {% for notif in notifications.notifications %}
+        <li class="notification-item">
+            <span class="notif-message">{{ notif.message }}</span>
+            <span class="notif-status">{{ 'Delivered' if notif.delivered == 'True' else 'Pending' }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('dashboard.view_notifications') }}" class="btn btn-secondary">View All</a>
+</div>
+{% endif %}
+
+<!-- Popular Locations -->
+<div class="data-card">
+    <h3>Popular Locations</h3>
+    <div class="location-grid">
+        {% for loc, count in widgets.popular_locations %}
+        <div class="location-card">
+            <span class="loc-name">{{ loc }}</span>
+            <span class="loc-count">{{ count }} routes</span>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Recent Notifications -->
+<div class="data-card">
+    <h3>Campus Announcements</h3>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Message</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for notif in widgets.recent_notifications %}
+            <tr>
+                <td>{{ notif.message }}</td>
+                <td>{{ 'Delivered' if notif.delivered == 'True' else 'Pending' }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
