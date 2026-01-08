@@ -1,0 +1,56 @@
+id,name,building,floor,accessible
+1,Main Entrance,Main,1,True
+2,Library,Main,1,True
+3,Admin Office,Admin,1,True
+4,Reception,Main,1,True
+5,Computer Lab,Technology,1,True
+6,Study Hall,Main,2,True
+7,Cafeteria,Commons,1,True
+8,Student Lounge,Commons,1,True
+9,Kitchen,Commons,1,False
+10,Outdoor Seating,Commons,1,True
+11,Lecture Hall A,Academic,1,True
+12,Lecture Hall B,Academic,1,True
+13,Lecture Hall C,Academic,2,True
+14,Science Lab,Science,1,True
+15,Chemistry Lab,Science,1,True
+16,Physics Lab,Science,2,True
+17,Biology Lab,Science,2,True
+18,Engineering Workshop,Engineering,1,False
+19,IT Help Desk,Technology,1,True
+20,Gym,Sports,1,True
+21,Locker Room,Sports,1,True
+22,Sports Field,Sports,1,True
+23,Swimming Pool,Sports,1,True
+24,Showers,Sports,1,True
+25,Running Track,Sports,1,True
+26,Tennis Court,Sports,1,True
+27,Changing Room,Sports,1,True
+28,Principal Office,Admin,2,True
+29,HR Department,Admin,1,True
+30,Finance Office,Admin,1,True
+31,Conference Room,Admin,2,True
+32,Board Room,Admin,2,True
+33,Game Room,Commons,1,True
+34,Quiet Zone,Main,2,True
+35,Reading Room,Main,2,True
+36,Art Studio,Arts,1,True
+37,Music Room,Arts,1,True
+38,Gallery,Arts,1,True
+39,Auditorium,Arts,1,True
+40,Stage,Arts,1,True
+41,Medical Center,Services,1,True
+42,Pharmacy,Services,1,True
+43,Emergency Exit,Services,1,True
+44,Parking Lot A,Outdoor,1,True
+45,Parking Lot B,Outdoor,1,True
+46,Security Booth,Outdoor,1,True
+47,Main Gate,Outdoor,1,True
+48,Visitor Center,Main,1,True
+49,Information Desk,Main,1,True
+50,Bookstore,Main,1,True
+51,Chapel,Spiritual,1,True
+52,Garden,Outdoor,1,True
+53,Pond,Outdoor,1,True
+54,Meditation Area,Outdoor,1,True
+55,Restrooms,Academic,1,True

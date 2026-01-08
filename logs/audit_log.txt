@@ -1,0 +1,2 @@
+# Audit Log - Smart Campus Navigation System
+# Format: [timestamp] ACTION_TYPE: description

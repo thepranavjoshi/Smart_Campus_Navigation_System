@@ -1,0 +1,101 @@
+id,start_location,end_location,distance_m,accessible
+1,Main Entrance,Library,120,True
+2,Main Entrance,Admin Office,85,True
+3,Main Entrance,Reception,30,True
+4,Library,Computer Lab,75,True
+5,Library,Study Hall,45,True
+6,Library,Cafeteria,150,True
+7,Cafeteria,Student Lounge,40,True
+8,Cafeteria,Kitchen,25,False
+9,Cafeteria,Outdoor Seating,35,True
+10,Lecture Hall A,Lecture Hall B,30,True
+11,Lecture Hall A,Library,180,True
+12,Lecture Hall A,Main Entrance,200,True
+13,Lecture Hall B,Lecture Hall C,35,True
+14,Lecture Hall B,Restrooms,20,True
+15,Lecture Hall C,Science Lab,60,True
+16,Science Lab,Chemistry Lab,40,True
+17,Science Lab,Physics Lab,45,True
+18,Chemistry Lab,Biology Lab,50,True
+19,Physics Lab,Engineering Workshop,80,False
+20,Engineering Workshop,Computer Lab,100,True
+21,Computer Lab,IT Help Desk,25,True
+22,Computer Lab,Library,75,True
+23,Gym,Locker Room,20,True
+24,Gym,Sports Field,150,True
+25,Gym,Swimming Pool,80,True
+26,Gym,Cafeteria,200,True
+27,Locker Room,Showers,15,True
+28,Sports Field,Running Track,50,True
+29,Sports Field,Tennis Court,70,True
+30,Swimming Pool,Changing Room,25,True
+31,Admin Office,Principal Office,20,True
+32,Admin Office,HR Department,35,True
+33,Admin Office,Finance Office,30,True
+34,Principal Office,Conference Room,40,True
+35,Conference Room,Board Room,25,True
+36,Student Lounge,Game Room,30,True
+37,Student Lounge,Cafeteria,40,True
+38,Study Hall,Library,45,True
+39,Study Hall,Quiet Zone,20,True
+40,Quiet Zone,Reading Room,15,True
+41,Art Studio,Music Room,55,True
+42,Art Studio,Gallery,40,True
+43,Music Room,Auditorium,70,True
+44,Auditorium,Stage,30,True
+45,Auditorium,Main Entrance,180,True
+46,Gallery,Cafeteria,120,True
+47,Medical Center,Pharmacy,25,True
+48,Medical Center,Main Entrance,100,True
+49,Medical Center,Emergency Exit,35,True
+50,Parking Lot A,Main Entrance,150,True
+51,Parking Lot A,Security Booth,30,True
+52,Parking Lot B,Gym,100,True
+53,Parking Lot B,Sports Field,80,True
+54,Security Booth,Main Gate,20,True
+55,Main Gate,Visitor Center,40,True
+56,Visitor Center,Main Entrance,60,True
+57,Visitor Center,Information Desk,15,True
+58,Bookstore,Library,50,True
+59,Bookstore,Student Lounge,65,True
+60,Bookstore,Main Entrance,90,True
+61,Chapel,Garden,60,True
+62,Chapel,Main Entrance,140,True
+63,Garden,Outdoor Seating,45,True
+64,Garden,Pond,35,True
+65,Pond,Meditation Area,25,True
+66,Cafeteria,Library,150,True
+67,Gym,Library,280,True
+68,Main Entrance,Gym,250,True
+69,Lecture Hall A,Gym,300,False
+70,Science Lab,Library,120,True
+71,Admin Office,Cafeteria,175,True
+72,Student Lounge,Library,100,True
+73,Auditorium,Cafeteria,160,True
+74,Medical Center,Cafeteria,130,True
+75,Bookstore,Cafeteria,110,True
+76,Computer Lab,Cafeteria,180,True
+77,Engineering Workshop,Science Lab,90,False
+78,Art Studio,Library,140,True
+79,Music Room,Student Lounge,120,True
+80,Parking Lot A,Cafeteria,200,True
+81,Main Gate,Library,220,True
+82,Garden,Library,180,True
+83,Gym,Science Lab,320,True
+84,Lecture Hall A,Science Lab,150,True
+85,Lecture Hall B,Library,160,True
+86,Lecture Hall C,Library,170,True
+87,Swimming Pool,Cafeteria,250,True
+88,Sports Field,Cafeteria,230,True
+89,Conference Room,Cafeteria,180,True
+90,HR Department,Main Entrance,110,True
+91,Finance Office,Main Entrance,105,True
+92,IT Help Desk,Main Entrance,130,True
+93,Gallery,Main Entrance,160,True
+94,Stage,Cafeteria,190,True
+95,Pharmacy,Main Entrance,125,True
+96,Running Track,Gym,80,True
+97,Tennis Court,Gym,120,True
+98,Board Room,Main Entrance,145,True
+99,Reading Room,Cafeteria,170,True
+100,Information Desk,Main Entrance,75,True

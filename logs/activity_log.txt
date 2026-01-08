@@ -1,0 +1,65 @@
+# Activity Log - Smart Campus Navigation System
+# Format: [timestamp] User ID: ACTION - details
+[2025-12-30T17:49:02.981616] User 0: LOGIN_FAILED - Username: christopher@stmarys.com
+[2025-12-30T17:49:28.923162] User 2: LOGIN_INITIATED - MFA pending for christopher
+[2025-12-30T17:49:48.969054] User 2: RESEND_OTP - New OTP generated
+[2025-12-30T17:50:20.402326] User 2: LOGIN_INITIATED - MFA pending for christopher
+[2025-12-30T17:51:37.298106] User 2: MFA_FAILED - Invalid OTP entered
+[2025-12-30T17:51:56.303294] User 2: MFA_FAILED - Invalid OTP entered
+[2025-12-30T17:51:58.548842] User 2: RESEND_OTP - New OTP generated
+[2025-12-30T17:52:06.084120] User 2: LOGIN_SUCCESS - MFA verified
+[2025-12-30T17:52:31.178578] User 2: Gym -> Cafeteria (SUCCESS)
+[2025-12-30T17:52:42.853858] User 2: Lecture Hall A -> Library (SUCCESS)
+[2025-12-30T17:52:45.526643] User 2: Lecture Hall A -> Library (SUCCESS)
+[2025-12-30T17:53:28.990457] User 0: LOGIN_FAILED - Username: richard@stmarys.com
+[2025-12-30T17:53:37.102176] User 14: LOGIN_INITIATED - MFA pending for richard
+[2025-12-30T17:53:44.526363] User 14: LOGIN_SUCCESS - MFA verified
+[2025-12-30T17:53:54.867953] User 14: Cafeteria -> Lecture Hall A (SUCCESS)
+[2025-12-30T17:54:16.806043] User 14: LOGOUT - User richard logged out
+[2025-12-30T17:54:25.487665] User 31: LOGIN_INITIATED - MFA pending for robert
+[2025-12-30T17:54:36.456779] User 31: LOGIN_SUCCESS - MFA verified
+[2025-12-30T17:54:46.294556] User 31: LOGOUT - User robert logged out
+[2025-12-30T17:55:02.751431] User 4: LOGIN_INITIATED - MFA pending for timothy
+[2025-12-30T17:55:13.071588] User 4: LOGIN_SUCCESS - MFA verified
+[2025-12-30T18:01:36.476207] User 4: Lecture Hall A -> Library (SUCCESS)
+[2025-12-30T18:03:00.885934] User 4: Lecture Hall A -> Library (SUCCESS)
+[2025-12-30T18:03:54.709631] User 4: LOGOUT - User timothy logged out
+[2025-12-30T18:04:17.104186] User 1: LOGIN_INITIATED - MFA pending for susan
+[2025-12-30T18:04:36.838942] User 1: LOGIN_SUCCESS - MFA verified
+[2025-12-30T18:04:52.359727] User 1: Lecture Hall A -> Cafeteria (SUCCESS)
+[2025-12-30T18:05:33.166261] User 1: LOGOUT - User susan logged out
+[2025-12-30T18:05:55.160371] User 4: LOGIN_INITIATED - MFA pending for timothy
+[2025-12-30T18:06:06.429278] User 4: LOGIN_SUCCESS - MFA verified
+[2025-12-30T18:08:17.789825] User 4: LOGOUT - User timothy logged out
+[2025-12-30T18:08:27.120720] User 6: LOGIN_INITIATED - MFA pending for kathleen
+[2025-12-30T18:08:35.733329] User 6: LOGIN_SUCCESS - MFA verified
+[2025-12-30T18:10:08.750496] User 6: Cafeteria -> Gym (SUCCESS)
+[2025-12-30T18:17:52.732467] User 6: Cafeteria -> Library (SUCCESS)
+[2025-12-30T18:23:25.956677] User 6: LOGOUT - User kathleen logged out
+[2025-12-31T11:56:08.480819] User 25: LOGIN_INITIATED - MFA pending for danny
+[2025-12-31T11:56:30.577599] User 25: LOGIN_SUCCESS - MFA verified
+[2025-12-31T11:57:09.494736] User 25: LOGOUT - User danny logged out
+[2025-12-31T12:44:20.963302] User 8: LOGIN_INITIATED - MFA pending for jennifer
+[2025-12-31T12:44:42.463342] User 8: LOGIN_SUCCESS - MFA verified
+[2025-12-31T12:45:10.148561] User 8: LOGOUT - User jennifer logged out
+[2025-12-31T12:45:24.687509] User 2: LOGIN_INITIATED - MFA pending for christopher
+[2025-12-31T12:45:36.685218] User 2: LOGIN_SUCCESS - MFA verified
+[2025-12-31T15:04:06.052372] User 2: LOGIN_INITIATED - MFA pending for christopher
+[2025-12-31T15:04:19.667940] User 2: LOGIN_SUCCESS - MFA verified
+[2025-12-31T15:06:10.138452] User 2: LOGOUT - User christopher logged out
+[2025-12-31T15:06:14.033910] User 151: LOGIN_INITIATED - MFA pending for jill
+[2025-12-31T15:06:26.636043] User 151: LOGIN_SUCCESS - MFA verified
+[2025-12-31T15:06:42.170804] User 151: Gym -> Library (SUCCESS)
+[2025-12-31T15:06:56.668580] User 151: Lecture Hall A -> Cafeteria (SUCCESS)
+[2025-12-31T15:07:52.938228] User 151: LOGOUT - User jill logged out
+[2025-12-31T15:07:57.719832] User 12: LOGIN_INITIATED - MFA pending for audrey
+[2025-12-31T15:08:06.166997] User 12: LOGIN_SUCCESS - MFA verified
+[2025-12-31T15:08:21.345335] User 12: Lecture Hall A -> Library (SUCCESS)
+[2025-12-31T15:08:35.026187] User 12: LOGOUT - User audrey logged out
+[2026-01-05T12:50:55.796781] User 201: REGISTER - New user registered: admin_john_test
+[2026-01-05T12:50:58.652298] User 201: LOGIN_INITIATED - MFA pending for admin_john_test
+[2026-01-05T12:51:12.928221] User 201: LOGIN_SUCCESS - MFA verified
+[2026-01-05T12:51:33.866213] User 201: Admin Office -> Pond (SUCCESS)
+[2026-01-05T12:51:44.333829] User 201: Admin Office -> Music Room (SUCCESS)
+[2026-01-05T12:52:07.489255] User 201: Biology Lab -> Changing Room (SUCCESS)
+[2026-01-05T13:06:13.814354] User 201: LOGOUT - User admin_john_test logged out

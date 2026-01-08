@@ -1,0 +1,276 @@
+# Alerts Log - Smart Campus Navigation System
+# Format: [timestamp] Notification ID: message - status
+[2025-12-30T18:07:28.620211] Notification 201: Notification 1... - CREATED
+[2025-12-30T18:07:28.622210] Notification 202: Notification 1... - CREATED
+[2025-12-30T18:07:28.623209] Notification 203: Notification 1... - CREATED
+[2025-12-30T18:07:28.629211] Notification 204: Notification 1... - CREATED
+[2025-12-30T18:07:28.630763] Notification 205: Notification 1... - CREATED
+[2025-12-30T18:07:28.632721] Notification 206: Notification 1... - CREATED
+[2025-12-30T18:07:28.634721] Notification 207: Notification 1... - CREATED
+[2025-12-30T18:07:28.636721] Notification 208: Notification 1... - CREATED
+[2025-12-30T18:07:28.638720] Notification 209: Notification 1... - CREATED
+[2025-12-30T18:07:28.640324] Notification 210: Notification 1... - CREATED
+[2025-12-30T18:07:28.644323] Notification 211: Notification 1... - CREATED
+[2025-12-30T18:07:28.646322] Notification 212: Notification 1... - CREATED
+[2025-12-30T18:07:28.648322] Notification 213: Notification 1... - CREATED
+[2025-12-30T18:07:28.650321] Notification 214: Notification 1... - CREATED
+[2025-12-30T18:07:28.652321] Notification 215: Notification 1... - CREATED
+[2025-12-30T18:07:28.653322] Notification 216: Notification 1... - CREATED
+[2025-12-30T18:07:28.655880] Notification 217: Notification 1... - CREATED
+[2025-12-30T18:07:28.658889] Notification 218: Notification 1... - CREATED
+[2025-12-30T18:07:28.661885] Notification 219: Notification 1... - CREATED
+[2025-12-30T18:07:28.663885] Notification 220: Notification 1... - CREATED
+[2025-12-30T18:07:28.665886] Notification 221: Notification 1... - CREATED
+[2025-12-30T18:07:28.666886] Notification 222: Notification 1... - CREATED
+[2025-12-30T18:07:28.668886] Notification 223: Notification 1... - CREATED
+[2025-12-30T18:07:28.670886] Notification 224: Notification 1... - CREATED
+[2025-12-30T18:07:28.672885] Notification 225: Notification 1... - CREATED
+[2025-12-30T18:07:28.675891] Notification 226: Notification 1... - CREATED
+[2025-12-30T18:07:28.677887] Notification 227: Notification 1... - CREATED
+[2025-12-30T18:07:28.680454] Notification 228: Notification 1... - CREATED
+[2025-12-30T18:07:28.681396] Notification 229: Notification 1... - CREATED
+[2025-12-30T18:07:28.683396] Notification 230: Notification 1... - CREATED
+[2025-12-30T18:07:28.685396] Notification 231: Notification 1... - CREATED
+[2025-12-30T18:07:28.686961] Notification 232: Notification 1... - CREATED
+[2025-12-30T18:07:28.688958] Notification 233: Notification 1... - CREATED
+[2025-12-30T18:07:28.690957] Notification 234: Notification 1... - CREATED
+[2025-12-30T18:07:28.694477] Notification 235: Notification 1... - CREATED
+[2025-12-30T18:07:28.696477] Notification 236: Notification 1... - CREATED
+[2025-12-30T18:07:28.698476] Notification 237: Notification 1... - CREATED
+[2025-12-30T18:07:28.700477] Notification 238: Notification 1... - CREATED
+[2025-12-30T18:07:28.701477] Notification 239: Notification 1... - CREATED
+[2025-12-30T18:07:28.704083] Notification 240: Notification 1... - CREATED
+[2025-12-30T18:07:28.706083] Notification 241: Notification 1... - CREATED
+[2025-12-30T18:07:28.709089] Notification 242: Notification 1... - CREATED
+[2025-12-30T18:07:28.712083] Notification 243: Notification 1... - CREATED
+[2025-12-30T18:07:28.713083] Notification 244: Notification 1... - CREATED
+[2025-12-30T18:07:28.715083] Notification 245: Notification 1... - CREATED
+[2025-12-30T18:07:28.717083] Notification 246: Notification 1... - CREATED
+[2025-12-30T18:07:28.719083] Notification 247: Notification 1... - CREATED
+[2025-12-30T18:07:28.721083] Notification 248: Notification 1... - CREATED
+[2025-12-30T18:07:28.723083] Notification 249: Notification 1... - CREATED
+[2025-12-30T18:07:28.726088] Notification 250: Notification 1... - CREATED
+[2025-12-30T18:07:28.729105] Notification 251: Notification 1... - CREATED
+[2025-12-30T18:07:28.730104] Notification 252: Notification 1... - CREATED
+[2025-12-30T18:07:28.732104] Notification 253: Notification 1... - CREATED
+[2025-12-30T18:07:28.734698] Notification 254: Notification 1... - CREATED
+[2025-12-30T18:07:28.736719] Notification 255: Notification 1... - CREATED
+[2025-12-30T18:07:28.737718] Notification 256: Notification 1... - CREATED
+[2025-12-30T18:07:28.739718] Notification 257: Notification 1... - CREATED
+[2025-12-30T18:07:28.743698] Notification 258: Notification 1... - CREATED
+[2025-12-30T18:07:28.745718] Notification 259: Notification 1... - CREATED
+[2025-12-30T18:07:28.747718] Notification 260: Notification 1... - CREATED
+[2025-12-30T18:07:28.749713] Notification 261: Notification 1... - CREATED
+[2025-12-30T18:07:28.751308] Notification 262: Notification 1... - CREATED
+[2025-12-30T18:07:28.753332] Notification 263: Notification 1... - CREATED
+[2025-12-30T18:07:28.755332] Notification 264: Notification 1... - CREATED
+[2025-12-30T18:07:28.757335] Notification 265: Notification 1... - CREATED
+[2025-12-30T18:07:28.761344] Notification 266: Notification 1... - CREATED
+[2025-12-30T18:07:28.763338] Notification 267: Notification 1... - CREATED
+[2025-12-30T18:07:28.765338] Notification 268: Notification 1... - CREATED
+[2025-12-30T18:07:28.767683] Notification 269: Notification 1... - CREATED
+[2025-12-30T18:07:28.768682] Notification 270: Notification 1... - CREATED
+[2025-12-30T18:07:28.770682] Notification 271: Notification 1... - CREATED
+[2025-12-30T18:07:28.772681] Notification 272: Notification 1... - CREATED
+[2025-12-30T18:07:28.776684] Notification 273: Notification 1... - CREATED
+[2025-12-30T18:07:28.778703] Notification 274: Notification 1... - CREATED
+[2025-12-30T18:07:28.781572] Notification 275: Notification 1... - CREATED
+[2025-12-30T18:07:28.783577] Notification 276: Notification 1... - CREATED
+[2025-12-30T18:07:28.784570] Notification 277: Notification 1... - CREATED
+[2025-12-30T18:07:28.786570] Notification 278: Notification 1... - CREATED
+[2025-12-30T18:07:28.788569] Notification 279: Notification 1... - CREATED
+[2025-12-30T18:07:28.790569] Notification 280: Notification 1... - CREATED
+[2025-12-30T18:07:28.794587] Notification 281: Notification 1... - CREATED
+[2025-12-30T18:07:28.796175] Notification 282: Notification 1... - CREATED
+[2025-12-30T18:07:28.798190] Notification 283: Notification 1... - CREATED
+[2025-12-30T18:07:28.800189] Notification 284: Notification 1... - CREATED
+[2025-12-30T18:07:28.802189] Notification 285: Notification 1... - CREATED
+[2025-12-30T18:07:28.804189] Notification 286: Notification 1... - CREATED
+[2025-12-30T18:07:28.806190] Notification 287: Notification 1... - CREATED
+[2025-12-30T18:07:28.810195] Notification 288: Notification 1... - CREATED
+[2025-12-30T18:07:28.811773] Notification 289: Notification 1... - CREATED
+[2025-12-30T18:07:28.813803] Notification 290: Notification 1... - CREATED
+[2025-12-30T18:07:28.815803] Notification 291: Notification 1... - CREATED
+[2025-12-30T18:07:28.817803] Notification 292: Notification 1... - CREATED
+[2025-12-30T18:07:28.819803] Notification 293: Notification 1... - CREATED
+[2025-12-30T18:07:28.821802] Notification 294: Notification 1... - CREATED
+[2025-12-30T18:07:28.823803] Notification 295: Notification 1... - CREATED
+[2025-12-30T18:07:28.827805] Notification 296: Notification 1... - CREATED
+[2025-12-30T18:07:28.829903] Notification 297: Notification 1... - CREATED
+[2025-12-30T18:07:28.831463] Notification 298: Notification 1... - CREATED
+[2025-12-30T18:07:28.833458] Notification 299: Notification 1... - CREATED
+[2025-12-30T18:07:28.835456] Notification 300: Notification 1... - CREATED
+[2025-12-30T18:07:28.837457] Notification 301: Notification 1... - CREATED
+[2025-12-30T18:07:28.839456] Notification 302: Notification 1... - CREATED
+[2025-12-30T18:07:28.843441] Notification 303: Notification 1... - CREATED
+[2025-12-30T18:07:28.845472] Notification 304: Notification 1... - CREATED
+[2025-12-30T18:07:28.847455] Notification 305: Notification 1... - CREATED
+[2025-12-30T18:07:28.849455] Notification 306: Notification 1... - CREATED
+[2025-12-30T18:07:28.851461] Notification 307: Notification 1... - CREATED
+[2025-12-30T18:07:28.853460] Notification 308: Notification 1... - CREATED
+[2025-12-30T18:07:28.855460] Notification 309: Notification 1... - CREATED
+[2025-12-30T18:07:28.858049] Notification 310: Notification 1... - CREATED
+[2025-12-30T18:07:28.862079] Notification 311: Notification 1... - CREATED
+[2025-12-30T18:07:28.864079] Notification 312: Notification 1... - CREATED
+[2025-12-30T18:07:28.866079] Notification 313: Notification 1... - CREATED
+[2025-12-30T18:07:28.868079] Notification 314: Notification 1... - CREATED
+[2025-12-30T18:07:28.870079] Notification 315: Notification 1... - CREATED
+[2025-12-30T18:07:28.872079] Notification 316: Notification 1... - CREATED
+[2025-12-30T18:07:28.875059] Notification 317: Notification 1... - CREATED
+[2025-12-30T18:07:28.878076] Notification 318: Notification 1... - CREATED
+[2025-12-30T18:07:28.880074] Notification 319: Notification 1... - CREATED
+[2025-12-30T18:07:28.882074] Notification 320: Notification 1... - CREATED
+[2025-12-30T18:07:28.884073] Notification 321: Notification 1... - CREATED
+[2025-12-30T18:07:28.886078] Notification 322: Notification 1... - CREATED
+[2025-12-30T18:07:28.888078] Notification 323: Notification 1... - CREATED
+[2025-12-30T18:07:28.890875] Notification 324: Notification 1... - CREATED
+[2025-12-30T18:07:28.893808] Notification 325: Notification 1... - CREATED
+[2025-12-30T18:07:28.896784] Notification 326: Notification 1... - CREATED
+[2025-12-30T18:07:28.898794] Notification 327: Notification 1... - CREATED
+[2025-12-30T18:07:28.901774] Notification 328: Notification 1... - CREATED
+[2025-12-30T18:07:28.903793] Notification 329: Notification 1... - CREATED
+[2025-12-30T18:07:28.905919] Notification 330: Notification 1... - CREATED
+[2025-12-30T18:07:28.908903] Notification 331: Notification 1... - CREATED
+[2025-12-30T18:07:28.911925] Notification 332: Notification 1... - CREATED
+[2025-12-30T18:07:28.913924] Notification 333: Notification 1... - CREATED
+[2025-12-30T18:07:28.915924] Notification 334: Notification 1... - CREATED
+[2025-12-30T18:07:28.917925] Notification 335: Notification 1... - CREATED
+[2025-12-30T18:07:28.919924] Notification 336: Notification 1... - CREATED
+[2025-12-30T18:07:28.921923] Notification 337: Notification 1... - CREATED
+[2025-12-30T18:07:28.923923] Notification 338: Notification 1... - CREATED
+[2025-12-30T18:07:28.926923] Notification 339: Notification 1... - CREATED
+[2025-12-30T18:07:28.928924] Notification 340: Notification 1... - CREATED
+[2025-12-30T18:07:28.930924] Notification 341: Notification 1... - CREATED
+[2025-12-30T18:07:28.932923] Notification 342: Notification 1... - CREATED
+[2025-12-30T18:07:28.934924] Notification 343: Notification 1... - CREATED
+[2025-12-30T18:07:28.937557] Notification 344: Notification 1... - CREATED
+[2025-12-30T18:07:28.939557] Notification 345: Notification 1... - CREATED
+[2025-12-30T18:07:28.941557] Notification 346: Notification 1... - CREATED
+[2025-12-30T18:07:28.943569] Notification 347: Notification 1... - CREATED
+[2025-12-30T18:07:28.945573] Notification 348: Notification 1... - CREATED
+[2025-12-30T18:07:28.948553] Notification 349: Notification 1... - CREATED
+[2025-12-30T18:07:28.950554] Notification 350: Notification 1... - CREATED
+[2025-12-30T18:07:28.952173] Notification 351: Notification 1... - CREATED
+[2025-12-30T18:07:28.954197] Notification 352: Notification 1... - CREATED
+[2025-12-30T18:07:28.956197] Notification 353: Notification 1... - CREATED
+[2025-12-30T18:07:28.958197] Notification 354: Notification 1... - CREATED
+[2025-12-30T18:07:28.961180] Notification 355: Notification 1... - CREATED
+[2025-12-30T18:07:28.963202] Notification 356: Notification 1... - CREATED
+[2025-12-30T18:07:28.965202] Notification 357: Notification 1... - CREATED
+[2025-12-30T18:07:28.968200] Notification 358: Notification 1... - CREATED
+[2025-12-30T18:07:28.969756] Notification 359: Notification 1... - CREATED
+[2025-12-30T18:07:28.971756] Notification 360: Notification 1... - CREATED
+[2025-12-30T18:07:28.973756] Notification 361: Notification 1... - CREATED
+[2025-12-30T18:07:28.976737] Notification 362: Notification 1... - CREATED
+[2025-12-30T18:07:28.979736] Notification 363: Notification 1... - CREATED
+[2025-12-30T18:07:28.981374] Notification 364: Notification 1... - CREATED
+[2025-12-30T18:07:28.983963] Notification 365: Notification 1... - CREATED
+[2025-12-30T18:07:28.985954] Notification 366: Notification 1... - CREATED
+[2025-12-30T18:07:28.987954] Notification 367: Notification 1... - CREATED
+[2025-12-30T18:07:28.989954] Notification 368: Notification 1... - CREATED
+[2025-12-30T18:07:28.991954] Notification 369: Notification 1... - CREATED
+[2025-12-30T18:07:28.994876] Notification 370: Notification 1... - CREATED
+[2025-12-30T18:07:28.996877] Notification 371: Notification 1... - CREATED
+[2025-12-30T18:07:28.999451] Notification 372: Notification 1... - CREATED
+[2025-12-30T18:07:29.001455] Notification 373: Notification 1... - CREATED
+[2025-12-30T18:07:29.004434] Notification 374: Notification 1... - CREATED
+[2025-12-30T18:07:29.006450] Notification 375: Notification 1... - CREATED
+[2025-12-30T18:07:29.008450] Notification 376: Notification 1... - CREATED
+[2025-12-30T18:07:29.010434] Notification 377: Notification 1... - CREATED
+[2025-12-30T18:07:29.013515] Notification 378: Notification 1... - CREATED
+[2025-12-30T18:07:29.015038] Notification 379: Notification 1... - CREATED
+[2025-12-30T18:07:29.017039] Notification 380: Notification 1... - CREATED
+[2025-12-30T18:07:29.019039] Notification 381: Notification 1... - CREATED
+[2025-12-30T18:07:29.021039] Notification 382: Notification 1... - CREATED
+[2025-12-30T18:07:29.024039] Notification 383: Notification 1... - CREATED
+[2025-12-30T18:07:29.026039] Notification 384: Notification 1... - CREATED
+[2025-12-30T18:07:29.029061] Notification 385: Notification 1... - CREATED
+[2025-12-30T18:07:29.031502] Notification 386: Notification 1... - CREATED
+[2025-12-30T18:07:29.033505] Notification 387: Notification 1... - CREATED
+[2025-12-30T18:07:29.036487] Notification 388: Notification 1... - CREATED
+[2025-12-30T18:07:29.038510] Notification 389: Notification 1... - CREATED
+[2025-12-30T18:07:29.040508] Notification 390: Notification 1... - CREATED
+[2025-12-30T18:07:29.043057] Notification 391: Notification 1... - CREATED
+[2025-12-30T18:07:29.046669] Notification 392: Notification 1... - CREATED
+[2025-12-30T18:07:29.048669] Notification 393: Notification 1... - CREATED
+[2025-12-30T18:07:29.050669] Notification 394: Notification 1... - CREATED
+[2025-12-30T18:07:29.052670] Notification 395: Notification 1... - CREATED
+[2025-12-30T18:07:29.054668] Notification 396: Notification 1... - CREATED
+[2025-12-30T18:07:29.056668] Notification 397: Notification 1... - CREATED
+[2025-12-30T18:07:29.059670] Notification 398: Notification 1... - CREATED
+[2025-12-30T18:07:29.062356] Notification 399: Notification 1... - CREATED
+[2025-12-30T18:07:29.064356] Notification 400: Notification 1... - CREATED
+[2025-12-31T12:55:02.790345] Notification 381: ... - CONFIRMED
+[2025-12-31T12:55:08.058982] Notification 361: ... - CONFIRMED
+[2025-12-31T15:07:32.385235] Notification 361: Go to Gym... - CREATED
+[2025-12-31T15:07:32.409238] Notification 362: Go to Gym... - CREATED
+[2025-12-31T15:07:32.426236] Notification 363: Go to Gym... - CREATED
+[2025-12-31T15:07:32.444234] Notification 364: Go to Gym... - CREATED
+[2025-12-31T15:07:32.463235] Notification 365: Go to Gym... - CREATED
+[2025-12-31T15:07:32.482532] Notification 366: Go to Gym... - CREATED
+[2025-12-31T15:07:32.502046] Notification 367: Go to Gym... - CREATED
+[2025-12-31T15:07:32.521414] Notification 368: Go to Gym... - CREATED
+[2025-12-31T15:07:32.543923] Notification 369: Go to Gym... - CREATED
+[2025-12-31T15:07:32.563923] Notification 370: Go to Gym... - CREATED
+[2025-12-31T15:07:32.583811] Notification 371: Go to Gym... - CREATED
+[2025-12-31T15:07:32.611811] Notification 372: Go to Gym... - CREATED
+[2025-12-31T15:07:32.653714] Notification 373: Go to Gym... - CREATED
+[2025-12-31T15:07:32.683574] Notification 374: Go to Gym... - CREATED
+[2025-12-31T15:07:32.714575] Notification 375: Go to Gym... - CREATED
+[2025-12-31T15:07:32.733849] Notification 376: Go to Gym... - CREATED
+[2025-12-31T15:07:32.757234] Notification 377: Go to Gym... - CREATED
+[2025-12-31T15:07:32.774783] Notification 378: Go to Gym... - CREATED
+[2025-12-31T15:07:32.794748] Notification 379: Go to Gym... - CREATED
+[2025-12-31T15:07:32.812748] Notification 380: Go to Gym... - CREATED
+[2025-12-31T15:07:32.832385] Notification 381: Go to Gym... - CREATED
+[2025-12-31T15:07:32.849384] Notification 382: Go to Gym... - CREATED
+[2025-12-31T15:07:32.868505] Notification 383: Go to Gym... - CREATED
+[2025-12-31T15:07:32.886505] Notification 384: Go to Gym... - CREATED
+[2025-12-31T15:07:32.905504] Notification 385: Go to Gym... - CREATED
+[2025-12-31T15:07:32.922507] Notification 386: Go to Gym... - CREATED
+[2025-12-31T15:07:32.942508] Notification 387: Go to Gym... - CREATED
+[2025-12-31T15:07:32.960508] Notification 388: Go to Gym... - CREATED
+[2025-12-31T15:07:32.977508] Notification 389: Go to Gym... - CREATED
+[2025-12-31T15:07:32.996139] Notification 390: Go to Gym... - CREATED
+[2025-12-31T15:07:33.013137] Notification 391: Go to Gym... - CREATED
+[2025-12-31T15:07:33.031056] Notification 392: Go to Gym... - CREATED
+[2025-12-31T15:07:33.048057] Notification 393: Go to Gym... - CREATED
+[2025-12-31T15:07:33.068573] Notification 394: Go to Gym... - CREATED
+[2025-12-31T15:07:33.087985] Notification 395: Go to Gym... - CREATED
+[2025-12-31T15:07:33.104985] Notification 396: Go to Gym... - CREATED
+[2025-12-31T15:07:33.120985] Notification 397: Go to Gym... - CREATED
+[2025-12-31T15:07:33.138985] Notification 398: Go to Gym... - CREATED
+[2025-12-31T15:07:33.154986] Notification 399: Go to Gym... - CREATED
+[2025-12-31T15:07:33.172692] Notification 400: Go to Gym... - CREATED
+[2025-12-31T15:07:33.189561] Notification 401: Go to Gym... - CREATED
+[2025-12-31T15:07:33.207540] Notification 402: Go to Gym... - CREATED
+[2025-12-31T15:07:33.226541] Notification 403: Go to Gym... - CREATED
+[2025-12-31T15:07:33.243501] Notification 404: Go to Gym... - CREATED
+[2025-12-31T15:07:33.260501] Notification 405: Go to Gym... - CREATED
+[2025-12-31T15:07:33.277870] Notification 406: Go to Gym... - CREATED
+[2025-12-31T15:07:33.296499] Notification 407: Go to Gym... - CREATED
+[2025-12-31T15:07:33.313017] Notification 408: Go to Gym... - CREATED
+[2025-12-31T15:07:33.331145] Notification 409: Go to Gym... - CREATED
+[2025-12-31T15:07:33.347727] Notification 410: Go to Gym... - CREATED
+[2025-12-31T15:07:33.366326] Notification 411: Go to Gym... - CREATED
+[2025-12-31T15:07:33.382323] Notification 412: Go to Gym... - CREATED
+[2025-12-31T15:07:33.404321] Notification 413: Go to Gym... - CREATED
+[2025-12-31T15:07:33.427645] Notification 414: Go to Gym... - CREATED
+[2025-12-31T15:07:33.451002] Notification 415: Go to Gym... - CREATED
+[2025-12-31T15:07:33.469002] Notification 416: Go to Gym... - CREATED
+[2025-12-31T15:07:33.486002] Notification 417: Go to Gym... - CREATED
+[2025-12-31T15:07:33.508011] Notification 418: Go to Gym... - CREATED
+[2025-12-31T15:07:33.530014] Notification 419: Go to Gym... - CREATED
+[2025-12-31T15:07:33.548012] Notification 420: Go to Gym... - CREATED
+[2025-12-31T15:07:33.568012] Notification 421: Go to Gym... - CREATED
+[2025-12-31T15:07:33.586172] Notification 422: Go to Gym... - CREATED
+[2025-12-31T15:07:33.607003] Notification 423: Go to Gym... - CREATED
+[2025-12-31T15:07:33.631690] Notification 424: Go to Gym... - CREATED
+[2025-12-31T15:07:33.650691] Notification 425: Go to Gym... - CREATED
+[2025-12-31T15:07:33.674578] Notification 426: Go to Gym... - CREATED
+[2025-12-31T15:07:33.699580] Notification 427: Go to Gym... - CREATED
+[2025-12-31T15:07:33.719014] Notification 428: Go to Gym... - CREATED
+[2025-12-31T15:07:33.741014] Notification 429: Go to Gym... - CREATED
+[2025-12-31T15:07:33.769018] Notification 430: Go to Gym... - CREATED
+[2025-12-31T15:07:33.787833] Notification 431: Go to Gym... - CREATED
+[2025-12-31T15:07:33.807833] Notification 432: Go to Gym... - CREATED
