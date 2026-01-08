@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block title %}Navigate{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Campus Navigation</h1>
+    <p>Find the best route between campus locations</p>
+</div>
+
+<div class="navigation-container">
+    <div class="nav-form-card">
+        <form method="POST" class="navigation-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="start_location">Starting Point</label>
+                    <select id="start_location" name="start_location" required>
+                        <option value="">-- Select Start Location --</option>
+                        {% for location in locations %}
+                        <option value="{{ location }}" {% if request.form.get('start_location')==location %}selected{%
+                            endif %}>
+                            {{ location }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="end_location">Destination</label>
+                    <select id="end_location" name="end_location" required>
+                        <option value="">-- Select Destination --</option>
+                        {% for location in locations %}
+                        <option value="{{ location }}" {% if request.form.get('end_location')==location %}selected{%
+                            endif %}>
+                            {{ location }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="accessible_only" {% if request.form.get('accessible_only') %}checked{%
+                        endif %}>
+                    <span>Accessible routes only (wheelchair/lift accessible)</span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+                Find Route
+            </button>
+        </form>
+    </div>
+
+    {% if result %}
+    <div class="route-result">
+        <div class="result-card success">
+            <h2>Route Found</h2>
+            <div class="route-stats">
+                <div class="stat">
+                    <span class="stat-value">{{ result.distance }}</span>
+                    <span class="stat-label">meters</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">{{ result.path|length }}</span>
+                    <span class="stat-label">stops</span>
+                </div>
+            </div>
+
+            <div class="directions-list">
+                <h3>Directions</h3>
+                <ol class="directions">
+                    {% for direction in result.directions %}
+                    <li>{{ direction }}</li>
+                    {% endfor %}
+                </ol>
+            </div>
+
+            <div class="route-path">
+                <h4>Route Path:</h4>
+                <div class="path-display">
+                    {% for loc in result.path %}
+                    <span class="path-node">{{ loc }}</span>
+                    {% if not loop.last %}<span class="path-arrow">-></span>{% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        {% if warnings %}
+        <div class="warnings-card">
+            <h3>Accessibility Warnings</h3>
+            <ul>
+                {% for warning in warnings %}
+                <li>{{ warning }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        {% if alternatives %}
+        <div class="alternatives-card">
+            <h3>Alternative Routes</h3>
+            {% for alt in alternatives %}
+            <div class="alt-route">
+                <div class="alt-header">
+                    <span>Alternative {{ loop.index }}</span>
+                    <span class="alt-distance">{{ alt.distance }}m</span>
+                </div>
+                <div class="alt-path">
+                    {% for loc in alt.path %}
+                    <span>{{ loc }}</span>{% if not loop.last %} -> {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="lift-status-card">
+        <h3>Lift Status</h3>
+        <div class="lift-grid">
+            {% for building, status in lift_status.items() %}
+            <div class="lift-item {{ 'working' if status else 'not-working' }}">
+                <span class="building-name">{{ building }}</span>
+                <span class="status-icon">{{ 'Working' if status else 'Not Working' }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

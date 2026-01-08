@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block title %}Analytics{% endblock %}
+
+{% block head %}
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Analytics Dashboard</h1>
+    <p>Comprehensive system analytics and reports</p>
+</div>
+
+<!-- Overview Stats -->
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-icon">Users</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ usage_stats.total_users }}</span>
+            <span class="stat-label">Total Users</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">Locations</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ usage_stats.total_locations }}</span>
+            <span class="stat-label">Locations</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">Routes</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ usage_stats.total_routes }}</span>
+            <span class="stat-label">Routes</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">Notifications</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ usage_stats.total_notifications }}</span>
+            <span class="stat-label">Notifications</span>
+        </div>
+    </div>
+</div>
+
+<!-- Interactive Charts -->
+<div class="dashboard-grid">
+    <div class="chart-card">
+        <h3>User Distribution by Role</h3>
+        <div class="chart-container">
+            {{ plotly_charts.user_chart | safe }}
+        </div>
+    </div>
+
+    <div class="chart-card">
+        <h3>Notification Delivery Rate</h3>
+        <div class="chart-container">
+            {{ plotly_charts.notification_gauge | safe }}
+        </div>
+    </div>
+</div>
+
+<div class="chart-card full-width">
+    <h3>Campus Buildings Overview</h3>
+    <div class="chart-container">
+        {{ plotly_charts.building_chart | safe }}
+    </div>
+</div>
+
+<!-- Static Charts -->
+<div class="dashboard-grid">
+    {% if charts.popular_locations %}
+    <div class="chart-card">
+        <h3>Most Connected Locations</h3>
+        <img src="{{ url_for('static', filename=charts.popular_locations) }}" alt="Popular Locations Chart">
+    </div>
+    {% endif %}
+
+    {% if charts.peak_times %}
+    <div class="chart-card">
+        <h3>Activity by Hour</h3>
+        <img src="{{ url_for('static', filename=charts.peak_times) }}" alt="Peak Times Chart">
+    </div>
+    {% endif %}
+</div>
+
+{% if charts.accessibility %}
+<div class="chart-card full-width">
+    <h3>Accessibility Overview</h3>
+    <img src="{{ url_for('static', filename=charts.accessibility) }}" alt="Accessibility Chart">
+</div>
+{% endif %}
+
+<!-- Building Statistics -->
+<div class="data-card">
+    <h3>Building Details</h3>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Building</th>
+                <th>Locations</th>
+                <th>Accessible</th>
+                <th>Floors</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for building, stats in building_stats.items() %}
+            <tr>
+                <td>{{ building }}</td>
+                <td>{{ stats.total_locations }}</td>
+                <td>{{ stats.accessible_locations }}</td>
+                <td>{{ stats.max_floor }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Peak Times -->
+<div class="data-card">
+    <h3>Activity by Hour</h3>
+    <div class="peak-times-grid">
+        {% for hour, count in peak_times.items() %}
+        <div class="hour-stat">
+            <span class="hour">{{ hour }}:00</span>
+            <div class="hour-bar" style="width: {{ (count / (peak_times.values()|max + 1)) * 100 }}%"></div>
+            <span class="count">{{ count }}</span>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

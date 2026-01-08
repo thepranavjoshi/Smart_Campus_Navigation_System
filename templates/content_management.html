@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}Content Management{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Content Management</h1>
+    <p>Manage campus notifications and announcements (Faculty/Admin only)</p>
+</div>
+
+<!-- Quick Actions -->
+<div class="quick-actions">
+    <a href="{{ url_for('dashboard.add_notification') }}" class="action-btn">
+        <span class="action-icon">Add</span>
+        <span>Add Notification</span>
+    </a>
+    <a href="{{ url_for('dashboard.index') }}" class="action-btn">
+        <span class="action-icon">Back</span>
+        <span>Back to Dashboard</span>
+    </a>
+</div>
+
+<!-- Notification Stats -->
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-icon">Total</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ notif_stats.total }}</span>
+            <span class="stat-label">Total Notifications</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">Delivered</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ notif_stats.delivered }}</span>
+            <span class="stat-label">Delivered</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">Pending</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ notif_stats.pending }}</span>
+            <span class="stat-label">Pending</span>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">Rate</div>
+        <div class="stat-info">
+            <span class="stat-value">{{ notif_stats.delivery_rate }}%</span>
+            <span class="stat-label">Delivery Rate</span>
+        </div>
+    </div>
+</div>
+
+<!-- Notifications List -->
+<div class="data-card">
+    <h3>Recent Notifications</h3>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>User</th>
+                <th>Message</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for notif in notifications %}
+            <tr>
+                <td>{{ notif.id }}</td>
+                <td>User {{ notif.user_id }}</td>
+                <td>{{ notif.message[:50] }}{% if notif.message|length > 50 %}...{% endif %}</td>
+                <td>
+                    <span class="status-badge {% if notif.get('status', 'Pending') == 'Confirmed' %}confirmed{% else %}pending{% endif %}">
+                        {{ notif.get('status', 'Pending') }}
+                    </span>
+                </td>
+                <td>
+                    {% if notif.get('status', 'Pending') != 'Confirmed' %}
+                    <a href="{{ url_for('dashboard.confirm_notification', notif_id=notif.id) }}" 
+                       class="btn btn-success btn-small" onclick="return confirm('Confirm this notification?')">
+                        Confirm
+                    </a>
+                    {% endif %}
+                    <form method="POST" action="{{ url_for('dashboard.delete_notification', notif_id=notif.id) }}"
+                        style="display:inline" onsubmit="return confirm('Delete this notification?')">
+                        <button type="submit" class="btn btn-danger btn-small">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Campus Routes Preview -->
+<div class="data-card">
+    <h3>Campus Routes (View Only)</h3>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Distance</th>
+                <th>Accessible</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for route in routes %}
+            <tr>
+                <td>{{ route.id }}</td>
+                <td>{{ route.start_location }}</td>
+                <td>{{ route.end_location }}</td>
+                <td>{{ route.distance_m }}m</td>
+                <td>{{ 'Yes' if route.accessible == 'True' else 'No' }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

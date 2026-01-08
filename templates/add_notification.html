@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Add Notification{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>➕ Add Notification</h1>
+    <p>Create a new campus announcement</p>
+</div>
+
+<div class="form-card">
+    <form method="POST" class="auth-form">
+        <div class="form-group">
+            <label for="message">Notification Message</label>
+            <textarea id="message" name="message" rows="3" required
+                placeholder="Enter your notification message..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Send To</label>
+            <div class="radio-group">
+                <label class="radio-label">
+                    <input type="radio" name="target" value="all" checked>
+                    <span>All Users</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="target" value="role">
+                    <span>Specific Role</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="target" value="user">
+                    <span>Specific User</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group" id="role-select" style="display:none;">
+            <label for="role">Select Role</label>
+            <select id="role" name="role">
+                <option value="student">Students</option>
+                <option value="faculty">Faculty</option>
+                <option value="staff">Staff</option>
+                <option value="admin">Admins</option>
+                <option value="visitor">Visitors</option>
+            </select>
+        </div>
+
+        <div class="form-group" id="user-select" style="display:none;">
+            <label for="user_id">Select User</label>
+            <select id="user_id" name="user_id">
+                <option value="">-- Select User --</option>
+                {% for user in users %}
+                <option value="{{ user.id }}">{{ user.username }} ({{ user.role }})</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send Notification</button>
+            <a href="{{ url_for('dashboard.content_management') }}" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    // Show/hide target-specific fields
+    document.querySelectorAll('input[name="target"]').forEach(radio => {
+        radio.addEventListener('change', function () {
+            document.getElementById('role-select').style.display =
+                this.value === 'role' ? 'block' : 'none';
+            document.getElementById('user-select').style.display =
+                this.value === 'user' ? 'block' : 'none';
+        });
+    });
+</script>
+{% endblock %}

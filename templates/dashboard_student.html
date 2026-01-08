@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Student Dashboard{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Student Dashboard</h1>
+    <p>Welcome, {{ session.get('username') }}! Navigate campus and view notifications.</p>
+</div>
+
+<!-- Quick Actions -->
+<div class="quick-actions center">
+    <a href="{{ url_for('navigation.navigate') }}" class="action-btn large">
+        <span class="action-icon">Navigation</span>
+        <span>Navigate Campus</span>
+    </a>
+</div>
+
+<!-- Notifications -->
+{% if notifications.count > 0 %}
+<div class="notification-banner">
+    <span class="notif-icon">Notifications</span>
+    <span>You have {{ notifications.count }} new notification(s)</span>
+    <a href="{{ url_for('dashboard.view_notifications') }}" class="btn btn-small">View</a>
+</div>
+{% endif %}
+
+{% if widgets.notifications %}
+<div class="data-card">
+    <h3>Your Notifications</h3>
+    <ul class="notification-list">
+        {% for notif in widgets.notifications %}
+        <li class="notification-item">
+            <span class="notif-message">{{ notif.message }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('dashboard.mark_notifications_read') }}" class="btn btn-secondary">Mark All Read</a>
+</div>
+{% endif %}
+
+<!-- Quick Navigate -->
+<div class="data-card">
+    <h3>Quick Navigation</h3>
+    <p>Find the best route to your destination on campus.</p>
+    <a href="{{ url_for('navigation.navigate') }}" class="btn btn-primary">Open Navigation</a>
+</div>
+
+<!-- Popular Locations -->
+<div class="data-card">
+    <h3>Popular Destinations</h3>
+    <div class="location-grid">
+        {% for loc, count in widgets.popular_locations %}
+        <div class="location-card">
+            <span class="loc-name">{{ loc }}</span>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

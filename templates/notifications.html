@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Notifications{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Notifications</h1>
+    <p>Your campus alerts and updates</p>
+</div>
+
+<div class="actions-bar">
+    <a href="{{ url_for('dashboard.mark_notifications_read') }}" class="btn btn-secondary">
+        Mark All as Read
+    </a>
+</div>
+
+<div class="notifications-container">
+    {% if notifications %}
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Message</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for notif in notifications %}
+            <tr class="{{ 'unread' if notif.delivered != 'True' else '' }}">
+                <td>{{ notif.id }}</td>
+                <td>{{ notif.message }}</td>
+                <td>
+                    {% if notif.delivered == 'True' %}
+                    <span class="status-delivered">Read</span>
+                    {% else %}
+                    <span class="status-pending">New</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div class="empty-state">
+        <span class="empty-icon">Empty</span>
+        <p>No notifications yet.</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
