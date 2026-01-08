@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Visitor Dashboard{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Welcome, Visitor</h1>
+    <p>Navigate our campus with ease.</p>
+</div>
+
+<!-- Quick Actions -->
+<div class="quick-actions center">
+    <a href="{{ url_for('navigation.navigate') }}" class="action-btn large">
+        <span class="action-icon">Navigate</span>
+        <span>Navigate Campus</span>
+    </a>
+</div>
+
+<!-- Information -->
+<div class="info-card">
+    <h3>Visitor Information</h3>
+    <p>As a visitor, you have access to basic campus navigation features.</p>
+    <ul>
+        <li>Find routes between campus locations</li>
+        <li>View accessible route options</li>
+        <li>Check lift status in buildings</li>
+    </ul>
+    <p>For full access to notifications and analytics, please contact the administration to upgrade your account.</p>
+</div>
+
+<!-- Popular Locations -->
+<div class="data-card">
+    <h3>Key Locations</h3>
+    <div class="location-grid">
+        {% for loc, count in widgets.popular_locations %}
+        <div class="location-card">
+            <span class="loc-name">{{ loc }}</span>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
